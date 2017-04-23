@@ -8,7 +8,7 @@ Personnel::Personnel() : namelen_(20), citylen_(20), ssnlen_(20) {
     ssn_  = new char[ssnlen_ + 1];
 }
 
-Personnel::Personnel(char* name, char* city, char* SSN) 
+Personnel::Personnel(char* name, char* city, char* SSN, int year, long salary) 
                     : namelen_(20), citylen_(20), ssnlen_(20) {
     name_ = new char[namelen_ + 1];
     strcpy(name_, name);
@@ -16,7 +16,8 @@ Personnel::Personnel(char* name, char* city, char* SSN)
     strcpy(city_, city);
     ssn_ = new char[ssnlen_ + 1];
     strcpy(ssn_, SSN);
-
+    salary_ = salary;  
+    year_ = year;
 }
 
 char* Personnel::name() {
@@ -30,6 +31,14 @@ char* Personnel::city() {
 char* Personnel::ssn() {
     return this->ssn_;
 }
+int Personnel::year() {
+    return this->year_;
+}
+
+long Personnel::salary() {
+    return this->salary_;
+}
+
 
 
 

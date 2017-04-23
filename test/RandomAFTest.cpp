@@ -11,7 +11,11 @@ protected:
 
     static void SetUpTestCase(){
         pers = new Personnel();    
-        persname = new Personnel("Gordon Zuehlke", "Brooklyn, NY", "562-33-2301");    
+        persname = new Personnel("Gordon Zuehlke", 
+                                 "Brooklyn, NY", 
+                                 "562-33-2301",
+                                  2017,
+                                  87000);    
     }
 
     //static void TearDownTestCase(){
@@ -50,6 +54,15 @@ TEST_F(RandomAFTest, personnel_has_correct_city){
 TEST_F(RandomAFTest, personnel_has_correct_SSN){
   ASSERT_STREQ(persname->ssn(), "562-33-2301");
 }
+
+TEST_F(RandomAFTest, personnel_has_correct_year){
+  ASSERT_EQ(persname->year(), 2017);
+}
+
+TEST_F(RandomAFTest, personnel_has_correct_salary){
+  ASSERT_EQ(persname->salary(), 87000);
+}
+
 
 
 

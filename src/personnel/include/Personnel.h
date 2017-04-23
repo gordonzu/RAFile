@@ -7,10 +7,12 @@
 class Personnel {
 public:
     Personnel();
-    Personnel(char*, char*, char*);
+    Personnel(char*, char*, char*, int, long);
     char* name();
     char* city();
     char* ssn();
+    int year();
+    long salary();
 
 private:
     const int namelen_;
@@ -19,9 +21,7 @@ private:
     char* name_;
     char* city_;
     char* ssn_;
-
-
+    long salary_;
+    int year_;
 };
-
-
 #endif
