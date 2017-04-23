@@ -11,7 +11,7 @@ protected:
 
     static void SetUpTestCase(){
         pers = new Personnel();    
-        persname = new Personnel("Gordon Zuehlke", "Brooklyn, NY");    
+        persname = new Personnel("Gordon Zuehlke", "Brooklyn, NY", "562-33-2301");    
     }
 
     //static void TearDownTestCase(){
@@ -42,6 +42,16 @@ TEST_F(RandomAFTest, personnel_has_name_length_twenty){
 TEST_F(RandomAFTest, personnel_city_is_not_null){
   ASSERT_NE(persname->city(), nullptr);
 }
+
+TEST_F(RandomAFTest, personnel_has_correct_city){
+  ASSERT_STREQ(persname->city(), "Brooklyn, NY");
+}
+
+TEST_F(RandomAFTest, personnel_has_correct_SSN){
+  ASSERT_STREQ(persname->ssn(), "562-33-2301");
+}
+
+
 
 
 
