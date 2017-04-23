@@ -32,14 +32,14 @@ TEST_F(RandomAFTest, personnel__name_is_not_null){
 }
 
 TEST_F(RandomAFTest, personnel_has_correct_name){
-  ASSERT_STREQ(persname->name(), "Gordon Zuehlke");
+  ASSERT_STREQ(persname->name(), (char *)"Gordon Zuehlke");
 }
 
-/*
+
 TEST_F(RandomAFTest, personnel_has_name_length_twenty){
-  ASSERT_EQ(strlen(pers->name()), 20);
+  ASSERT_EQ(strlen(persname->name()), 14);
 }
-*/
+
 
 
 /*TEST_F(MyListTest, list_is_empty){

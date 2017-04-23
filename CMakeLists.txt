@@ -7,7 +7,7 @@ include_directories("$ENV{GMOCK_HOME}/include" "$ENV{GMOCK_HOME}/gtest/include"
                     "$ENV{HOME}/src/cpp/RAFile/src/student/include") 
 link_directories("$ENV{GMOCK_HOME}/mybuild" "$ENV{GMOCK_HOME}/gtest/mybuild")
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -Wall -O0")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -Wno-write-strings -O0")
 
 set(sources
     src/personnel/cpp/Personnel.cpp
