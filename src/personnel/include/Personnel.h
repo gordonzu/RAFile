@@ -7,12 +7,15 @@
 class Personnel {
 public:
     Personnel();
-    Personnel(char*);
+    Personnel(char*, char*);
     char* name();
+    char* city();
 
 private:
     const int namelen_;
+    const int citylen_;
     char* name_;
+    char* city_;
 
 
 };
