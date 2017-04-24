@@ -3,16 +3,20 @@
 #define Personnel_h
 
 #include <string.h>
+#include "Writer.h"
 
 class Personnel {
 public:
     Personnel();
-    Personnel(char*, char*, char*, int, long);
+    Personnel(Writer*, char*, char*, char*, int, long);
     char* name();
     char* city();
     char* ssn();
     int year();
     long salary();
+
+    bool writeToFile();
+    bool readFromFile();
 
 private:
     const int namelen_;
@@ -23,5 +27,6 @@ private:
     char* ssn_;
     long salary_;
     int year_;
+    Writer* writer_;
 };
 #endif

@@ -8,8 +8,9 @@ Personnel::Personnel() : namelen_(20), citylen_(20), ssnlen_(20) {
     ssn_  = new char[ssnlen_ + 1];
 }
 
-Personnel::Personnel(char* name, char* city, char* SSN, int year, long salary) 
+Personnel::Personnel(Writer* writer, char* name, char* city, char* SSN, int year, long salary) 
                     : namelen_(20), citylen_(20), ssnlen_(20) {
+    writer_ = writer;
     name_ = new char[namelen_ + 1];
     strcpy(name_, name);
     city_ = new char[citylen_ + 1];
@@ -38,6 +39,17 @@ int Personnel::year() {
 long Personnel::salary() {
     return this->salary_;
 }
+
+bool Personnel::writeToFile()
+{
+    return writer_->writeRecord();
+}
+
+bool Personnel::readFromFile()
+{
+    return writer_->readRecord();
+}
+
 
 
 
