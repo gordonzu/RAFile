@@ -71,7 +71,7 @@ TEST_F(RandomAFTest, personnelHasCorrectSalary){
 
 TEST_F(RandomAFTest, personnelCallsWriteFile){
     EXPECT_CALL(*writer, writeRecord()).Times(AtLeast(1));
-    persname->writeToFile();
+    EXPECT_FALSE(persname->writeToFile());
 }
 
 
