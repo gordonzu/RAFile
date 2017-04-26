@@ -11,6 +11,7 @@ link_directories("$ENV{GMOCK_HOME}/mybuild" "$ENV{GMOCK_HOME}/gtest/mybuild")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -Wno-write-strings -O0")
 
 set(sources
+    src/personnel/cpp/file_writer.cpp
     test/mock_writer.cpp
     src/personnel/cpp/abstract_writer.cpp
     src/personnel/cpp/personnel.cpp

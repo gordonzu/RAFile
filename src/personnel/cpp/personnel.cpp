@@ -41,11 +41,11 @@ long Personnel::salary() {
 }
 
 bool Personnel::writeToFile() {
-    return writer_->writeRecord();
+    return writer_->write_record();
 }
 
 bool Personnel::readFromFile() {
-    return writer_->readRecord();
+    return writer_->read_record();
 }
 
 

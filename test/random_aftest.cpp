@@ -2,6 +2,7 @@
 #include "gtest/gtest.h"
 #include "personnel.h"
 #include "mock_writer.h"
+#include "file_writer.h"
 //#include "database.h"
 
 using namespace::testing;
@@ -70,7 +71,7 @@ TEST_F(RandomAFTest, personnelHasCorrectSalary){
 }
 
 TEST_F(RandomAFTest, personnelCallsWriteFile){
-    EXPECT_CALL(*writer, writeRecord()).Times(AtLeast(1));
+    EXPECT_CALL(*writer, write_record()).Times(AtLeast(1));
     EXPECT_FALSE(persname->writeToFile());
 }
 

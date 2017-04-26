@@ -6,8 +6,8 @@ class AbstractWriter {
 public:
     //AbstractWriter();
     virtual ~AbstractWriter();
-    virtual bool writeRecord() = 0;
-    virtual bool readRecord() = 0;
+    virtual bool write_record() = 0;
+    virtual bool read_record() = 0;
 };
 #endif
 

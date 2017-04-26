@@ -12,8 +12,8 @@ public:
     //bool virtual writeRecord();
     //bool virtual readRecord();
 
-    MOCK_METHOD0(writeRecord, bool());
-    MOCK_METHOD0(readRecord, bool());
+    MOCK_METHOD0(write_record, bool());
+    MOCK_METHOD0(read_record, bool());
 };
 #endif
 
