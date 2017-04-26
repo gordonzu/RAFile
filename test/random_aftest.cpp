@@ -15,7 +15,7 @@ protected:
 
     static void SetUpTestCase(){
         pers = new Personnel();
-        writer = new MockWriter();    
+        writer = new MockWriter("/home/gordonzu/src/cpp/RAFile/testtxt");    
         persname = new Personnel(writer,
                                  "Gordon Zuehlke", 
                                  "Brooklyn, NY", 

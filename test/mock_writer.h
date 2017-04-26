@@ -8,12 +8,13 @@
 
 class MockWriter : public AbstractWriter {
 public:
-    MockWriter();     
-    //bool virtual writeRecord();
-    //bool virtual readRecord();
+    MockWriter(char* file): file_name_(file) {}     
 
     MOCK_METHOD0(write_record, bool());
     MOCK_METHOD0(read_record, bool());
+
+private:
+    char* file_name_;
 };
 #endif
 

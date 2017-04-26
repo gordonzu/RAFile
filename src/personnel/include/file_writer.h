@@ -6,16 +6,18 @@
 #include <fstream>
 #include "abstract_writer.h"
 
-//using namespeace::std;
+using namespace::std;
 
 class FileWriter : public AbstractWriter {
 public:
-  FileWriter(std::fstream& file): file_(file) {}
+  FileWriter(char* file_name);
   bool write_record();
   bool read_record();
   virtual ~FileWriter(); 
+  char* file_name();
 
 private: 
-  std::fstream& file_;
+  fstream file_;
+  char* file_name_;
 };
 #endif
