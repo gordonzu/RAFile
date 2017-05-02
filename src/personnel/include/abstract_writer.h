@@ -4,7 +4,6 @@
 
 class AbstractWriter {
 public:
-    //AbstractWriter();
     virtual ~AbstractWriter();
     virtual bool write_record() = 0;
     virtual bool read_record() = 0;

@@ -2,13 +2,18 @@
 
 #include "file_writer.h"
 
-FileWriter::FileWriter(char* file_name): file_name_(file_name)
+FileWriter::FileWriter(char* file_name): file_name_(strdup(file_name))
 {
     file_.open(file_name_);
 
     if (!file_.is_open()) {
         std::cout << "File " << file_name_ << " did not open." << endl;
     } 
+}
+
+FileWriter::FileWriter(FileWriter& other) 
+{
+    
 }
 
 char* FileWriter::file_name()

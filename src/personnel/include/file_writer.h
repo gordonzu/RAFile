@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <cstring>
 #include "abstract_writer.h"
 
 using namespace::std;
@@ -11,6 +12,7 @@ using namespace::std;
 class FileWriter : public AbstractWriter {
 public:
   FileWriter(char* file_name);
+  FileWriter(FileWriter& other);
   bool write_record();
   bool read_record();
   virtual ~FileWriter(); 
